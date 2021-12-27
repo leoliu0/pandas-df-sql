@@ -4,7 +4,9 @@ perform SQL operations on pandas dataframe
 A thin wrapper around the wonderful duckdb library i.e. https://duckdb.org/
 
 ## Installation
+```
 pip install pandas-df-sql
+```
 
 ## Usage
 ```python
