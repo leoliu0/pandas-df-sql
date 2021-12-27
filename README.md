@@ -5,7 +5,7 @@ A thin wrapper around the wonderful duckdb library i.e. https://duckdb.org/
 
 ## Installation
 ```
-pip install pandas-df-sql
+pip install -U pandas-df-sql
 ```
 
 ## Usage
