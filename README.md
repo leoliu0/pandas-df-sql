@@ -24,7 +24,7 @@ pdsql.query(query,namespace,disk=False) # returns a result dataframe
 
 The ```query``` is a string containing the SQL query to be executed. Currently
 only SELECT statement is supported. The ```namespace``` is
-a dictionary containing dataframes, It passed ```globals()``` by default. The ```disk``` 
+a dictionary containing dataframes, one can simply pass ```globals()```. The ```disk``` 
 argument is a boolean. By default, a in-memory database is created. if disk set
 to True, a disk-based database is created. It is useful when resulting
 dataframe is too large to fit in memory.
