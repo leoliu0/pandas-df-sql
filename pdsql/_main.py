@@ -32,9 +32,10 @@ def query(query,ns, disk=False):
         db.register(table,ns[table])
 
     df = db.query(query).df()
-    try:
-        db.close()
-        os.remove("tmp.duckdb")
-    except:
-        logger.warning("could not delete tmp.duckdb")
+    db.close()
+    if disk:
+        try:
+            os.remove("tmp.duckdb")
+        except:
+            logger.warning("could not delete tmp.duckdb")
     return df
