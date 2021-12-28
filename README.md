@@ -29,3 +29,8 @@ argument is a boolean. By default, a in-memory database is created. if disk set
 to True, a disk-based database is created. It is useful when resulting
 dataframe is too large to fit in memory.
 
+## Why?
+pandasql is fantastic, but too slow for big datasets. To use SQL, one needs to load pandas df into a SQLITE database and query the data back into pandas, incur a huge IO cost. duckdb transfer data very efficiently between itself and pandas, so it is way faster. Recently, the technology develops around apache arrow aiming at zero-copying
+https://duckdb.org/2021/12/03/duck-arrow.html
+
+Other SQL-mimicking technologies such as IBIS are not as feature rich as a real SQL database. One would want a complete SQL experience.
